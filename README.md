@@ -16,6 +16,36 @@ Speedup(P) = Tserial / Tmax(P)
 
 Eficiência(P) = Speedup(P) / P
 
+Nessas expressões:
+
+- **P** é o número de processos MPI usados na execução;
+- **Tserial** é o tempo da implementação serial para resolver o mesmo problema, com o mesmo lote fixo de nove imagens;
+- **Tmax(P)** é o tempo total do rank mais lento quando são usados P processos. O máximo é necessário porque a execução paralela só termina quando o rank mais lento termina;
+- **Speedup(P)** indica quantas vezes a versão paralela é mais rápida que a serial;
+- **Eficiência(P)** mede quanto da capacidade teórica dos P processos foi efetivamente aproveitada.
+
+Interpretação do speedup:
+
+- Speedup = 1: a versão paralela tem o mesmo tempo da serial;
+- Speedup > 1: houve aceleração;
+- Speedup = P: aceleração ideal, isto é, dobrar os processos divide o tempo por dois;
+- Speedup < 1: a versão paralela ficou mais lenta que a serial devido aos custos de comunicação, sincronização, I/O ou partes seriais.
+
+A eficiência normalmente é apresentada como porcentagem:
+
+Eficiência percentual(P) = 100 × Speedup(P) / P
+
+Uma eficiência de 100% representa o caso ideal. Por exemplo, speedup 8 com P=8 corresponde a 100% de eficiência. Speedup 4 com P=8 corresponde a 50%, pois os oito processos entregaram desempenho equivalente ao ganho ideal de apenas quatro.
+
+No MPI original deste trabalho, para P=8:
+
+- Tserial = 228,069766 s;
+- Tmax(8) = 931,131945 s;
+- Speedup(8) = 228,069766 / 931,131945 = 0,244938;
+- Eficiência(8) = 0,244938 / 8 = 0,030617, ou 3,06%.
+
+Portanto, essa execução MPI demorou aproximadamente 4,08 vezes o tempo da serial e aproveitou apenas 3,06% do ganho ideal para oito processos. Isso ocorre porque o tempo de comunicação e espera coletiva domina a execução.
+
 Fração de comunicação:
 
 Fcomm(P) = Tcomunicação,max(P) / Ttotal,max(P)
@@ -47,15 +77,29 @@ O volume de nove imagens garantiu mais de 200 segundos. O tempo interno mede o p
 
 O tamanho permaneceu fixo em nove imagens.
 
-| P | Tmax médio (s) | Desvio entre execuções (s) | Tcomp médio entre ranks (s) | Tcomm médio entre ranks (s) | Tcomp,max (s) | Tcomm,max (s) | Fcomm | Speedup | Eficiência |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 920,699605 | 16,757619 | 827,536952 | 4,069292 | 827,536952 | 4,069292 | 0,44% | 0,247714 | 24,77% |
-| 2 | 920,515827 | 9,771710 | 412,830329 | 462,177564 | 789,220257 | 884,060167 | 96,04% | 0,247763 | 12,39% |
-| 3 | 932,817530 | 8,958984 | 278,262503 | 623,128618 | 785,903227 | 908,858752 | 97,43% | 0,244496 | 8,15% |
-| 4 | 924,519183 | 2,160872 | 207,294493 | 694,360892 | 774,017663 | 906,619242 | 98,06% | 0,246690 | 6,17% |
-| 8 | 931,131945 | 8,138953 | 104,470820 | 815,236945 | 770,422572 | 922,132198 | 99,03% | 0,244938 | 3,06% |
-| 12 | 925,919325 | 0,877066 | 69,258428 | 849,136581 | 762,112718 | 919,863185 | 99,35% | 0,246317 | 2,05% |
-| 13 | 936,277719 | 9,477733 | 64,540024 | 864,596943 | 769,288113 | 930,653381 | 99,40% | 0,243592 | 1,87% |
+### Desempenho no strong scaling
+
+| P | Tmax médio (s) | Desvio (s) | Speedup | Eficiência |
+|---:|---:|---:|---:|---:|
+| 1 | 920,700 | 16,758 | 0,247714 | 24,77% |
+| 2 | 920,516 | 9,772 | 0,247763 | 12,39% |
+| 3 | 932,818 | 8,959 | 0,244496 | 8,15% |
+| 4 | 924,519 | 2,161 | 0,246690 | 6,17% |
+| 8 | 931,132 | 8,139 | 0,244938 | 3,06% |
+| 12 | 925,919 | 0,877 | 0,246317 | 2,05% |
+| 13 | 936,278 | 9,478 | 0,243592 | 1,87% |
+
+### Tempos internos e comunicação no strong scaling
+
+| P | Tcomp médio (s) | Tcomm médio (s) | Tcomp máximo (s) | Tcomm máximo (s) | Fcomm |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 827,537 | 4,069 | 827,537 | 4,069 | 0,44% |
+| 2 | 412,830 | 462,178 | 789,220 | 884,060 | 96,04% |
+| 3 | 278,263 | 623,129 | 785,903 | 908,859 | 97,43% |
+| 4 | 207,294 | 694,361 | 774,018 | 906,619 | 98,06% |
+| 8 | 104,471 | 815,237 | 770,423 | 922,132 | 99,03% |
+| 12 | 69,258 | 849,137 | 762,113 | 919,863 | 99,35% |
+| 13 | 64,540 | 864,597 | 769,288 | 930,653 | 99,40% |
 
 ### Discussão do strong scaling
 
@@ -93,13 +137,25 @@ Se f for limitado ao intervalo físico, obtém-se f=1 e Speedup_Amdahl=1 para qu
 
 No weak scaling foi mantida uma imagem de trabalho por processo: Ntotal=P. O indicador adequado é eficiência weak = T(P=1)/T(P), pois o tamanho total varia e o speedup tradicional contra a serial de nove imagens não é comparável.
 
-| P | Ntotal | Tmax (s) | Tcomp médio (s) | Tcomm médio (s) | Tcomm,max (s) | Fcomm | Eficiência weak |
-|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 1 | 99,069805 | 92,481051 | 0,398464 | 0,398464 | 0,40% | 100,00% |
-| 2 | 2 | 208,359690 | 93,909890 | 104,482146 | 199,911051 | 95,95% | 47,55% |
-| 4 | 4 | 414,061015 | 92,400137 | 310,915502 | 406,087850 | 98,07% | 23,93% |
-| 8 | 8 | 830,177396 | 92,961124 | 726,855485 | 822,125695 | 99,03% | 11,93% |
-| 13 | 13 | 1.335,336581 | 91,716843 | 1.233,122433 | 1.327,252587 | 99,39% | 7,42% |
+### Desempenho no weak scaling
+
+| P | Imagens (Ntotal) | Tmax (s) | Eficiência weak |
+|---:|---:|---:|---:|
+| 1 | 1 | 99,070 | 100,00% |
+| 2 | 2 | 208,360 | 47,55% |
+| 4 | 4 | 414,061 | 23,93% |
+| 8 | 8 | 830,177 | 11,93% |
+| 13 | 13 | 1.335,337 | 7,42% |
+
+### Tempos internos e comunicação no weak scaling
+
+| P | Tcomp médio (s) | Tcomm médio (s) | Tcomm máximo (s) | Fcomm |
+|---:|---:|---:|---:|---:|
+| 1 | 92,481 | 0,398 | 0,398 | 0,40% |
+| 2 | 93,910 | 104,482 | 199,911 | 95,95% |
+| 4 | 92,400 | 310,916 | 406,088 | 98,07% |
+| 8 | 92,961 | 726,855 | 822,126 | 99,03% |
+| 13 | 91,717 | 1.233,122 | 1.327,253 | 99,39% |
 
 ### Discussão do weak scaling
 
