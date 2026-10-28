@@ -1,0 +1,19 @@
+[serial] potm2608.ppm
+Tempo de execução da quantização: 13.289357998 segundos
+[serial] potm2608a.ppm
+Tempo de execução da quantização: 13.043733298 segundos
+[serial] potm2608b.ppm
+Tempo de execução da quantização: 13.384199041 segundos
+[serial] potm2608c.ppm
+Tempo de execução da quantização: 13.104345765 segundos
+[serial] potm2608d.ppm
+Tempo de execução da quantização: 13.546907269 segundos
+[serial] potm2608e.ppm
+Tempo de execução da quantização: 13.879091376 segundos
+[serial] potm2608f.ppm
+Tempo de execução da quantização: 13.358365674 segundos
+[serial] potm2608g.ppm
+Tempo de execução da quantização: 12.983383891 segundos
+[serial] potm2608h.ppm
+Tempo de execução da quantização: 12.818251073 segundos
+SERIAL_TIMING total=228.636933804

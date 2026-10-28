@@ -1,0 +1,21 @@
+potm2608.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608a.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608b.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608c.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608d.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608e.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608f.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608g.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+potm2608h.ppm -> saida_regioes_p8.ppm: 4 cores, 8 processos, 4 nós compactados
+RANK_TIMING rank=2 total=277.109102761 comp=1.351064865 comm=38.758941726 io=236.996431776
+RANK_TIMING rank=1 total=277.110882143 comp=1.297988252 comm=38.758831223 io=237.051480089
+RANK_TIMING rank=0 total=277.114828596 comp=141.126717879 comm=0.001061559 io=135.558425189
+RANK_TIMING rank=7 total=277.114977222 comp=1.410278428 comm=38.759974090 io=236.941322791
+RANK_TIMING rank=4 total=277.112980441 comp=1.355742966 comm=38.759409871 io=236.994348387
+RANK_TIMING rank=3 total=277.109424356 comp=1.427981814 comm=38.758714593 io=236.919978883
+RANK_TIMING rank=5 total=277.110544671 comp=1.355905114 comm=38.758161915 io=236.992650029
+RANK_TIMING rank=6 total=277.111045089 comp=1.363512104 comm=38.759048762 io=236.985393464
+TIMING_STATS metric=total min=277.109102761 max=277.114977222 mean=277.111723160 stddev=0.002136596
+TIMING_STATS metric=comp min=1.297988252 max=141.126717879 mean=18.836148928 stddev=46.221505138
+TIMING_STATS metric=comm min=0.001061559 max=38.759974090 mean=33.914267967 stddev=12.817987198
+TIMING_STATS metric=io min=135.558425189 max=237.051480089 mean=224.305003826 stddev=33.543073961

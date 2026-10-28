@@ -201,29 +201,24 @@ A versão por regiões removeu Scatterv/Gatherv dos pixels, reduziu Fcomm para c
 
 ## 9. Arquivos consolidados
 
+Todos os dados e logs importantes estão organizados em [`resultados`](resultados/README.md).
+
 Dados principais:
 
-- serial_raw.tsv
-- strong_raw.tsv
-- weak_raw.tsv
-- tabela_strong_calculada.tsv
-- tabela_weak_calculada.tsv
-- graficos/strong_speedup_amdahl.png
-- graficos/strong_eficiencia.png
-- graficos/weak_scaling.png
-- graficos/fracao_comunicacao.png
-- graficos/comparacao_otimizacoes.png
-- relatorio_escalabilidade.md
-- relatorio_escalabilidade.txt
+- [`serial_raw.tsv`](resultados/dados/serial_raw.tsv)
+- [`strong_raw.tsv`](resultados/dados/strong_raw.tsv)
+- [`weak_raw.tsv`](resultados/dados/weak_raw.tsv)
+- [`tabela_strong_calculada.tsv`](resultados/dados/tabela_strong_calculada.tsv)
+- [`tabela_weak_calculada.tsv`](resultados/dados/tabela_weak_calculada.tsv)
 
-Logs individuais:
+Evidências individuais:
 
-- runs/serial_rep1.txt e serial_rep2.txt
-- runs/strong_p1_rep1.txt até strong_p13_rep2.txt
-- runs/weak_p1_rep1.txt até weak_p13_rep1.txt
-- runs/nao_bloqueante_p13_9img.txt
-- runs/otimizada_p8_9img.txt e otimizada_p12_9img.txt
-- runs/regioes_p8_9img.txt e regioes_p12_9img.txt
-- arquivos externos correspondentes
-- hashes de validação contra a serial
+- [logs do serial](resultados/logs/serial)
+- [logs do strong scaling](resultados/logs/strong)
+- [logs do weak scaling](resultados/logs/weak)
+- [logs das versões otimizadas](resultados/logs/otimizacoes)
+- [hashes de validação contra a serial](resultados/logs/hashes)
+- [logs gerais de execução](resultados/logs/execucao)
+
+Os gráficos usados neste relatório estão em [`graficos`](graficos).
 

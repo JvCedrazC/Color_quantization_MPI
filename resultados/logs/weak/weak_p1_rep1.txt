@@ -1,0 +1,5 @@
+potm2608.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+RANK_TIMING rank=0 total=99.069805493 comp=92.481051214 comm=0.398463557 io=6.190289989
+TIMING_STATS metric=total min=99.069805493 max=99.069805493 mean=99.069805493 stddev=0.000000000
+TIMING_STATS metric=comp min=92.481051214 max=92.481051214 mean=92.481051214 stddev=0.000000000
+TIMING_STATS metric=comm min=0.398463557 max=0.398463557 mean=0.398463557 stddev=0.000000000

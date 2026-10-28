@@ -1,0 +1,25 @@
+potm2608.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608a.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608b.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608c.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608d.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608e.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608f.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608g.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+potm2608h.ppm -> saida_nao_bloqueante.ppm: 1 cores, 13 processos
+RANK_TIMING rank=0 total=947.956474645 comp=777.972178767 comm=78.162598007 io=91.821694122
+RANK_TIMING rank=1 total=947.943016050 comp=5.772522624 comm=942.170490871 io=0.000000000
+RANK_TIMING rank=2 total=947.937128033 comp=5.775432089 comm=942.161693907 io=0.000000000
+RANK_TIMING rank=3 total=947.937758717 comp=5.801814082 comm=942.135941768 io=0.000000000
+RANK_TIMING rank=4 total=947.950234850 comp=5.819840970 comm=942.130391885 io=0.000000000
+RANK_TIMING rank=5 total=947.941780143 comp=5.849474081 comm=942.092303825 io=0.000000000
+RANK_TIMING rank=6 total=947.943682925 comp=6.017515221 comm=941.926165613 io=0.000000000
+RANK_TIMING rank=7 total=947.956917080 comp=6.045547875 comm=941.911366752 io=0.000000000
+RANK_TIMING rank=8 total=947.950062243 comp=5.840659910 comm=942.109400310 io=0.000000000
+RANK_TIMING rank=9 total=947.937578502 comp=5.806700444 comm=942.130876124 io=0.000000000
+RANK_TIMING rank=10 total=947.939667305 comp=5.681179230 comm=942.258485813 io=0.000000000
+RANK_TIMING rank=11 total=947.946795229 comp=5.635383874 comm=942.311409108 io=0.000000000
+RANK_TIMING rank=12 total=947.945059955 comp=5.585170489 comm=942.359887545 io=0.000000000
+TIMING_STATS metric=total min=947.937128033 max=947.956917080 mean=947.945088898 stddev=0.006467650
+TIMING_STATS metric=comp min=5.585170489 max=777.972178767 mean=65.200263050 stddev=205.759566238
+TIMING_STATS metric=comm min=78.162598007 max=942.359887545 mean=875.681616271 stddev=230.223942440

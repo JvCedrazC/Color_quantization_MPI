@@ -1,0 +1,13 @@
+potm2608.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608a.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608b.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608c.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608d.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608e.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608f.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608g.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+potm2608h.ppm -> saida_mpi.ppm: 1 cores, 1 processos
+RANK_TIMING rank=0 total=908.850178825 comp=813.817365430 comm=4.366720674 io=90.666088177
+TIMING_STATS metric=total min=908.850178825 max=908.850178825 mean=908.850178825 stddev=0.000000000
+TIMING_STATS metric=comp min=813.817365430 max=813.817365430 mean=813.817365430 stddev=0.000000000
+TIMING_STATS metric=comm min=4.366720674 max=4.366720674 mean=4.366720674 stddev=0.000000000

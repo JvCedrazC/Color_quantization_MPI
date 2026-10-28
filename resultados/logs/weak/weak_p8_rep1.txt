@@ -1,0 +1,19 @@
+potm2608.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+potm2608a.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+potm2608b.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+potm2608c.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+potm2608d.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+potm2608e.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+potm2608f.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+potm2608g.ppm -> saida_mpi.ppm: 1 cores, 8 processos
+RANK_TIMING rank=0 total=830.177262315 comp=685.657345206 comm=61.710247741 io=82.809665502
+RANK_TIMING rank=1 total=830.165042541 comp=8.284610879 comm=821.880429336 io=0.000000000
+RANK_TIMING rank=2 total=830.160195181 comp=8.269885801 comm=821.890307005 io=0.000000000
+RANK_TIMING rank=3 total=830.160701196 comp=8.420856155 comm=821.739842490 io=0.000000000
+RANK_TIMING rank=4 total=830.171613399 comp=8.636430290 comm=821.535181046 io=0.000000000
+RANK_TIMING rank=5 total=830.164282425 comp=8.269727076 comm=821.894553151 io=0.000000000
+RANK_TIMING rank=6 total=830.166066824 comp=8.098437002 comm=822.067627399 io=0.000000000
+RANK_TIMING rank=7 total=830.177396334 comp=8.051699497 comm=822.125694812 io=0.000000000
+TIMING_STATS metric=total min=830.160195181 max=830.177396334 mean=830.167820027 stddev=0.006396981
+TIMING_STATS metric=comp min=8.051699497 max=685.657345206 mean=92.961123988 stddev=224.018179485
+TIMING_STATS metric=comm min=61.710247741 max=822.125694812 mean=726.855485373 stddev=251.401327473

@@ -1,0 +1,27 @@
+[comparação] início: 2026-10-28 00:47:26 -03
+[comparação] executando MPI otimizada: P=12, N=9 imagens
+potm2608.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608a.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608b.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608c.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608d.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608e.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608f.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608g.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+potm2608h.ppm -> saida_otimizada_p12.ppm: 4 cores, 12 processos
+RANK_TIMING rank=1 total=323.268727114 comp=1.721216781 comm=321.545185208 io=0.000000000
+RANK_TIMING rank=11 total=323.270064181 comp=1.721853246 comm=321.546113762 io=0.000000000
+RANK_TIMING rank=8 total=323.271132256 comp=1.722778053 comm=321.546290383 io=0.000000000
+RANK_TIMING rank=9 total=323.266830014 comp=1.722847452 comm=321.541975908 io=0.000000000
+RANK_TIMING rank=7 total=323.274719389 comp=1.724078371 comm=321.548327472 io=0.000000000
+RANK_TIMING rank=0 total=323.273224093 comp=154.238145936 comm=75.313603788 io=93.620758119
+RANK_TIMING rank=5 total=323.269503626 comp=1.727030564 comm=321.540234433 io=0.000000000
+RANK_TIMING rank=3 total=323.267030791 comp=1.723601648 comm=321.541142490 io=0.000000000
+RANK_TIMING rank=6 total=323.270134561 comp=1.724971959 comm=321.543085421 io=0.000000000
+RANK_TIMING rank=2 total=323.266712274 comp=1.722567680 comm=321.542001725 io=0.000000000
+RANK_TIMING rank=4 total=323.272294162 comp=1.724438824 comm=321.545742373 io=0.000000000
+RANK_TIMING rank=10 total=323.267595574 comp=1.725135264 comm=321.540142772 io=0.000000000
+TIMING_STATS metric=total min=323.266712274 max=323.274719389 mean=323.269830670 stddev=0.002520132
+TIMING_STATS metric=comp min=1.721216781 max=154.238145936 mean=14.433222148 stddev=42.152770577
+TIMING_STATS metric=comm min=75.313603788 max=321.548327472 mean=301.024487145 stddev=68.054391974
+TIMING_STATS metric=io min=0.000000000 max=93.620758119 mean=7.801729843 stddev=25.875410606
